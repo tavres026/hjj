@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Cliente</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="/">FoodExpress</a>
+
+            <div>
+
+                <a href="/" class="btn btn-warning">Home</a>
+
+                <a href="/cardapio" class="btn btn-primary">
+                    Cardápio
+                </a>
+
+                <a href="/pedidos" class="btn btn-success">
+                    Pedidos
+                </a>
+
+                <a href="/contato" class="btn btn-danger">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="container mt-5">
+
+        <h1>Cliente: {{ nome }}</h1>
+
+        <h2>Cidade: {{ cidade }}</h2>
+
+        <div class="alert alert-success">
+
+            {{ entrega }}
+
+        </div>
+
+        <a href="/pedidos" class="btn btn-primary">
+
+            Ver Pedidos
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FoodExpress</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="/">FoodExpress</a>
+
+            <div>
+
+                <a href="/" class="btn btn-warning">Home</a>
+
+                <a href="/cardapio" class="btn btn-primary">Cardápio</a>
+
+                <a href="/pedidos" class="btn btn-success">Pedidos</a>
+
+                <a href="/cliente/Ana/Natal" class="btn btn-info">
+                    Cliente
+                </a>
+
+                <a href="/contato" class="btn btn-danger">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="container mt-4">
+
+        <div id="carouselExample" class="carousel slide">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <img src="{{ url_for('static', filename='imagens/banner1.jpg') }}" class="d-block w-100">
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="{{ url_for('static', filename='imagens/banner2.jpg') }}" class="d-block w-100">
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="{{ url_for('static', filename='imagens/banner3.jpg') }}" class="d-block w-100">
+
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+        <div class="text-center mt-5">
+
+            <h1>FoodExpress</h1>
+
+            <h3>Seu delivery favorito!</h3>
+
+            <div class="alert alert-danger">
+
+                Frete grátis acima de R$ 50!
+
+            </div>
+
+            <a href="/cardapio" class="btn btn-lg btn-warning">
+
+                VER CARDÁPIO
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
