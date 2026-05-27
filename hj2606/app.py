@@ -3,16 +3,20 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return render_template('inicio.html')
+def inicio():
+    return render_template('index.html')
 
-@app.route('/sobre')
-def sobre():
-    return render_template('sobre.html')
+@app.route('/cursos')
+def cursos():
+    return render_template('cursos.html')
 
-@app.route('/servicos')
-def servicor():
-    return render_template('servicos.html')
+@app.route('/professores')
+def professores():
+    return render_template('professores.html')
+
+@app.route('/contato')
+def contato():
+    return render_template('contato.html')
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True)
