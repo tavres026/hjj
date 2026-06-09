@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferências do Usuário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="{{ tema }}">
+
+    <div class="container">
+        <h1>Projeto Flask com Cookies</h1>
+
+        {% if nome %}
+            <h2>Olá, {{ nome }}! Seja bem-vindo de volta.</h2>
+        {% else %}
+            <h2>Bem-vindo visitante!</h2>
+        {% endif %}
+
+        <form action="/salvar_nome" method="POST">
+            <label for="nome">Digite seu nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <button type="submit">Salvar Nome</button>
+        </form>
+
+        <br>
+
+        <a href="/trocar_tema">
+            <button>Alternar Tema</button>
+        </a>
+    </div>
+
+</body>
+</html>
